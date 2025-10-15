@@ -5,9 +5,11 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
+  margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #fff;
+  background: radial-gradient(circle at center, #C2CECA 34%, #92A49E 100%);
 }
 
 /* ========== HEADER / NAVIGATION ========== */
@@ -49,11 +51,64 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* ========== HERO SECTION ========== */
 .hero {
-  background-image: url('hero.png');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
 
+/* ========== FEATURE CARDS ========== */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; 
+  padding: 60px 0;
+}
+
+.feature-card {
+  background-color: #f5ecdd;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.feature-card h3 { 
+  font-family: "Vollkorn", serif; 
+  font-weight: 600; 
+  font-style: italic; 
+  color: #a87444; 
+  font-size: 1rem; 
+  letter-spacing: 0.5px; 
+}
