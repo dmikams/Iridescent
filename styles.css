@@ -112,3 +112,40 @@ nav ul li a:hover {
   font-size: 1rem; 
   letter-spacing: 0.5px; 
 }
+
+.vein-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 35px;
+}
+
+.vein-row img {
+  width: 140px;
+  height: auto;
+}
+
+.vein-desc {
+  width: 500px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: 6px 6px 0px rgba(58, 85, 75, 0.6);
+  font-family: "Poppins", sans-serif;
+  color: #534d45;
+}
+
+.vein-desc.warm {
+  background-color: #e2a676;
+}
+
+.vein-desc.cool {
+  background-color: #f2d8a7;
+}
+
+.vein-desc.neutral {
+  background-color: #dec0a1;
+}
