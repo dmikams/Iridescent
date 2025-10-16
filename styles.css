@@ -149,3 +149,11 @@ nav ul li a:hover {
 .vein-desc.neutral {
   background-color: #dec0a1;
 }
+
+footer{
+  background-color: #f5ecdd;
+  color: #c99973;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 15px 30px;
+}
