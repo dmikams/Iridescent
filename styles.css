@@ -80,28 +80,28 @@ nav ul li a:hover {
 }
 
 .feature-card {
-  background-color: #f5ecdd;
+  background-color: transparent;
   width: 200px;
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 .feature-card img {
-  width: 70px;
-  height: 70px;
+  width: 120px;
+  height: 120px;
   margin-bottom: 12px;
-  opacity: 0.9;
+  opacity: 0.95;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.4));
 }
 
 .feature-card h3 { 
@@ -113,6 +113,38 @@ nav ul li a:hover {
   letter-spacing: 0.5px; 
 }
 
+/* ========== TIPS SECTION ========== */
+#tips {
+  padding-left: 100px;
+  padding-top: 60px;
+  position: relative;
+}
+
+#tips h2 {
+  font-weight: 700;
+  font-size: 90px;
+  color: #f9faf4;
+  line-height: 1;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+  text-align: left;
+  margin: 0;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+#tips h3 {
+  font-family: "Vollkorn", serif;
+  font-style: italic;
+  color: #f9faf4;
+  font-size: 64px;
+  line-height: 1;
+  margin: 0;
+  margin-top: -5px;
+  margin-left: 15px;
+  position: relative;
+  z-index: 2;
+}
 .vein-row {
   display: flex;
   align-items: center;
