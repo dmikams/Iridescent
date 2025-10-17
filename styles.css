@@ -186,10 +186,52 @@ nav ul li a:hover {
   background-color: #dec0a1;
 }
 
+/* ========== JEWELRY TEST SECTION ========== */
+.jewelry-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 35px;
+}
+
+.jewelry-row img {
+  width: 140px;
+  height: auto;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.5));
+  border-radius: 10px;
+}
+
+.jewelry-desc {
+  width: 500px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+  box-shadow: 6px 6px 0px rgba(58, 85, 75, 0.6);
+  font-family: "Poppins", sans-serif;
+  color: #534d45;
+}
+
+.jewelry-desc.warm {
+  background-color: #d4af37; 
+}
+
+.jewelry-desc.cool {
+  background-color: #c0c0c0; 
+}
+
+.jewelry-desc.neutral {
+  background-color: #e0ccb8; 
+}
+
+/* ========== FOOTER SECTION ========== */
 footer{
   background-color: #f5ecdd;
   color: #c99973;
   text-transform: capitalize;
   text-align: center;
+  font-weight: bold;
   padding: 15px 30px;
 }
