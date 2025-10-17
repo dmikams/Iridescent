@@ -42,7 +42,7 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #c99973;
-  font-weight: 600;
+  font-weight: bold;
   transition: all 0.3s ease;
 }
 
@@ -69,6 +69,7 @@ nav ul li a:hover {
   margin: 0;
   padding: 0;
 }
+
 
 /* ========== FEATURE CARDS ========== */
 .features {
@@ -123,7 +124,7 @@ nav ul li a:hover {
 
 #tips h2 {
   font-weight: 700;
-  font-size: 90px;
+  font-size: 80px;
   color: #f9faf4;
   line-height: 1;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
@@ -138,7 +139,7 @@ nav ul li a:hover {
   font-family: "Vollkorn", serif;
   font-style: italic;
   color: #f9faf4;
-  font-size: 64px;
+  font-size: 50px;
   line-height: 1;
   margin: 0;
   margin-top: -5px;
