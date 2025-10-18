@@ -177,29 +177,7 @@ nav ul li a:hover {
   }
 }
 
-
-/*.moving-text {
-  font-weight: 700;
-  font-size: 15px;
-  text-transform: uppercase;
-  text-align: center;
-  color: #c99973;
-  animation: moveText 5s ease-in-out infinite alternate;
-  position: relative;
-}
-
-@keyframes moveText {
-  0% {
-    transform: translateX(-50px);
-  }
-  100% {
-    transform: translateX(50px);
-  }
-}
-*/
-
-
-/* ========== TIPS SECTION ========== */
+/* ========== TIPS HEADER SECTION ========== */
 #tips {
   padding-left: 100px;
   padding-top: 60px;
@@ -225,15 +203,16 @@ nav ul li a:hover {
   color: #f9faf4;
   text-align: center;
   font-size: 50px;
-  line-height: 1;
+  font-weight: lighter;
   margin: 0;
-  margin-top: -5px;
+  margin-top: 35px;
+  margin-bottom: 10px;
   margin-left: 15px;
   position: relative;
   z-index: 2;
 }
 
-/* ===== Vein Test Section ===== */
+/* ===== TIPS SECTION ===== */
 .vein-row, .jewelry-row {
   display: flex;
   justify-content: center;
@@ -274,47 +253,26 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
-/* ========== JEWELRY TEST SECTION ==========
-.jewelry-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 35px;
-}
-
-.jewelry-row img {
-  width: 140px;
-  height: auto;
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.5));
-  border-radius: 10px;
-}
-
-.jewelry-desc {
-  width: 500px;
-  padding: 15px 25px;
-  border-radius: 50px;
-  font-size: 1rem;
+.video-tutorial {
   text-align: center;
-  letter-spacing: 0.5px;
-  box-shadow: 6px 6px 0px rgba(58, 85, 75, 0.6);
+  margin-top: 40px;
+}
+
+.video-tutorial p {
   font-family: "Poppins", sans-serif;
-  color: #534d45;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 14px;
+  color: #f9faf4;
+  margin-top: 70px;
+  margin-bottom: 10px;
 }
 
-.jewelry-desc.warm {
-  background-color: #d4af37; 
+.video-tutorial iframe {
+  margin-bottom: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-
-.jewelry-desc.cool {
-  background-color: #c0c0c0; 
-}
-
-.jewelry-desc.neutral {
-  background-color: #e0ccb8; 
-}
-
-*/
 
 /* ========== FOOTER SECTION ========== */
 footer{
