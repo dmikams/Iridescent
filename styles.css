@@ -152,7 +152,7 @@ nav ul li a:hover {
 }
 
 /* ===== Vein Test Section ===== */
-.vein-row {
+.vein-row, .jewelry-row {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -160,26 +160,22 @@ nav ul li a:hover {
   margin: 40px 0;
 }
 
-.vein-card {
+.vein-card, .jewelry-card {
   background-color: #f9faf4;
-  width: 380px;
+  width: 350px;
   padding: 30px 30px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   text-align: center;
   transition: transform 0.3s ease;
 }
 
-.vein-card:hover {
-  transform: translateY(-5px);
-}
-
-.vein-card img {
+.vein-card img, .jewelry-card img {
   width: 100%;
   height: auto;
   margin-bottom: 15px;
 }
 
-.vein-label {
+.vein-label, .jewelry-label {
   font-family: "Poppins", sans-serif;
   color: #c99973;
   font-weight: 800;
@@ -188,7 +184,7 @@ nav ul li a:hover {
   letter-spacing: 1px;
 }
 
-.vein-desc {
+.vein-desc, .jewelry-desc {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   color: #534d45;
@@ -196,9 +192,7 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
-
-
-/* ========== JEWELRY TEST SECTION ========== */
+/* ========== JEWELRY TEST SECTION ==========
 .jewelry-row {
   display: flex;
   align-items: center;
@@ -237,6 +231,8 @@ nav ul li a:hover {
 .jewelry-desc.neutral {
   background-color: #e0ccb8; 
 }
+
+*/
 
 /* ========== FOOTER SECTION ========== */
 footer{
