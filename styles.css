@@ -221,6 +221,10 @@ nav ul li a:hover {
   margin: 40px 0;
 }
 
+.vein-card:hover, .jewelry-card:hover {
+  transform: translateY(-8px);
+}
+
 .vein-card, .jewelry-card {
   background-color: #f9faf4;
   width: 350px;
