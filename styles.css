@@ -117,6 +117,88 @@ nav ul li a:hover {
   letter-spacing: 0.5px; 
 }
 
+/* ========== MOVING LINE (CENTERED ABOVE TIPS) ========== 
+.moving-line {
+  position: relative;
+  width: 1500px;
+  height: 25px;
+  margin: 0 auto 25px auto;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #c99973, #f5ecdd, #c99973);
+  overflow: hidden;
+}
+
+.moving-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #ffffff, transparent);
+  animation: moveLine 2s linear infinite;
+}
+
+@keyframes moveLine {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+*/
+
+.background{
+  width: auto;
+  height: 50px;
+  background-color: #f5ecdd;
+}
+
+.moving-text {
+  font-weight: 700;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+  background: linear-gradient(80deg, #5f756d, #C2CECA, #5f756d);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: moveGradient 2s linear infinite;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+/*.moving-text {
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #c99973;
+  animation: moveText 5s ease-in-out infinite alternate;
+  position: relative;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(50px);
+  }
+}
+*/
+
+
 /* ========== TIPS SECTION ========== */
 #tips {
   padding-left: 100px;
