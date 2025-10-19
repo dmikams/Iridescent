@@ -117,38 +117,6 @@ nav ul li a:hover {
   letter-spacing: 0.5px; 
 }
 
-/* ========== MOVING LINE (CENTERED ABOVE TIPS) ========== 
-.moving-line {
-  position: relative;
-  width: 1500px;
-  height: 25px;
-  margin: 0 auto 25px auto;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #c99973, #f5ecdd, #c99973);
-  overflow: hidden;
-}
-
-.moving-line::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, #ffffff, transparent);
-  animation: moveLine 2s linear infinite;
-}
-
-@keyframes moveLine {
-  0% {
-    left: -50%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-*/
-
 .background{
   width: auto;
   height: 50px;
@@ -539,22 +507,6 @@ nav ul li a:hover {
   color: #c99973;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
-    padding: 25px;
-  }
-
-  .contact-form {
-    text-align: center;
-  }
-
-  .contact-form h3 {
-    text-align: center;
-  }
-}
-
 /* Input & Textarea Fields */
 .contact-form input,
 .contact-form textarea {
@@ -601,4 +553,20 @@ footer{
   text-align: center;
   font-weight: bold;
   padding: 15px 30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .contact-form {
+    text-align: center;
+  }
+
+  .contact-form h3 {
+    text-align: center;
+  }
 }
