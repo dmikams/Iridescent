@@ -555,18 +555,73 @@ footer{
   padding: 15px 30px;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet devices (768px and below) */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem 3%;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 3rem 4%;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .section h3 {
+    font-size: 1.5rem;
+  }
+
+  .moving-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .features {
+    gap: 2rem;
+    padding: 3rem 4%;
+  }
+
+  .feature-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .vein-row,
+  .jewelry-row {
+    gap: 1.5rem;
+  }
+
+  .vein-card,
+  .jewelry-card {
+    min-width: 200px;
+  }
+
+  .video-tutorial iframe {
+    height: 300px;
+  }
+
+  .recommendation-table th,
+  .recommendation-table td {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
   .contact-container {
-    flex-direction: column;
-    padding: 25px;
-  }
-
-  .contact-form {
-    text-align: center;
-  }
-
-  .contact-form h3 {
-    text-align: center;
+    gap: 2rem;
   }
 }
