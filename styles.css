@@ -627,7 +627,7 @@ footer{
 }
 /* ===== RESPONSIVE DESIGN ===== */
 
-/* Tablet devices (768px and below) */
+/* Tablet devices (768px) */
 @media screen and (max-width: 768px) {
   header {
     padding: 1rem 3%;
@@ -671,7 +671,6 @@ footer{
     height: 100px;
   }
 
-  /* --- Keep vein & jewelry cards in one line but smaller --- */
   .vein-row,
   .jewelry-row {
     flex-wrap: nowrap;
