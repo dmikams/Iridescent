@@ -557,7 +557,7 @@ footer{
 
 /* ===== RESPONSIVE DESIGN ===== */
 
-/* Tablet devices (768px and below) */
+/* Tablet devices (768px) */
 @media screen and (max-width: 768px) {
   header {
     padding: 1rem 3%;
@@ -623,5 +623,100 @@ footer{
 
   .contact-container {
     gap: 2rem;
+  }
+}
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet devices (768px and below) */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem 3%;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+  }
+
+  nav ul li a {
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 3rem 4%;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .section h3 {
+    font-size: 1.5rem;
+  }
+
+  .moving-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .features {
+    gap: 2rem;
+    padding: 3rem 4%;
+  }
+
+  .feature-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* --- Keep vein & jewelry cards in one line but smaller --- */
+  .vein-row,
+  .jewelry-row {
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .vein-card,
+  .jewelry-card {
+    width: 200px;
+    padding: 20px;
+  }
+
+  .vein-card img,
+  .jewelry-card img {
+    width: 80%;
+  }
+
+  .vein-label,
+  .jewelry-label {
+    font-size: 0.9rem;
+  }
+
+  .vein-desc,
+  .jewelry-desc {
+    font-size: 0.8rem;
+  }
+
+  .video-tutorial iframe {
+    height: 300px;
+  }
+
+  .recommendation-table th,
+  .recommendation-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-container {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+
+  .contact-image,
+  .contact-form {
+    flex: 1 1 100%;
   }
 }
