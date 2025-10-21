@@ -10,7 +10,8 @@ html {
   scroll-padding: 150px;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -83,7 +84,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px; 
+  gap: 80px;
   padding: 60px 0;
 }
 
@@ -113,16 +114,16 @@ nav ul li a:hover {
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.4));
 }
 
-.feature-card h3 { 
-  font-family: "Vollkorn", serif; 
-  font-weight: 600; 
-  font-style: italic; 
-  color: #a87444; 
-  font-size: 1rem; 
-  letter-spacing: 0.5px; 
+.feature-card h3 {
+  font-family: "Vollkorn", serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #a87444;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
-.background{
+.background {
   width: auto;
   height: 50px;
   background-color: #f5ecdd;
@@ -145,6 +146,7 @@ nav ul li a:hover {
   0% {
     background-position: 0% 50%;
   }
+
   100% {
     background-position: 100% 50%;
   }
@@ -162,7 +164,7 @@ nav ul li a:hover {
   color: #f9faf4;
   line-height: 1;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
-  text-align: left;
+  text-align: center;
   margin: 0;
   margin-bottom: 30px;
   position: relative;
@@ -185,7 +187,8 @@ nav ul li a:hover {
 }
 
 /* ===== TIPS SECTION ===== */
-.vein-row, .jewelry-row {
+.vein-row,
+.jewelry-row {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -193,11 +196,13 @@ nav ul li a:hover {
   margin: 40px 0;
 }
 
-.vein-card:hover, .jewelry-card:hover {
+.vein-card:hover,
+.jewelry-card:hover {
   transform: translateY(-8px);
 }
 
-.vein-card, .jewelry-card {
+.vein-card,
+.jewelry-card {
   background-color: #f9faf4;
   width: 350px;
   padding: 30px 30px;
@@ -206,13 +211,15 @@ nav ul li a:hover {
   transition: transform 0.3s ease;
 }
 
-.vein-card img, .jewelry-card img {
+.vein-card img,
+.jewelry-card img {
   width: 100%;
   height: auto;
   margin-bottom: 15px;
 }
 
-.vein-label, .jewelry-label {
+.vein-label,
+.jewelry-label {
   font-family: "Poppins", sans-serif;
   color: #c99973;
   font-weight: 800;
@@ -221,7 +228,8 @@ nav ul li a:hover {
   letter-spacing: 1px;
 }
 
-.vein-desc, .jewelry-desc {
+.vein-desc,
+.jewelry-desc {
   font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
   color: #534d45;
@@ -270,13 +278,13 @@ nav ul li a:hover {
 
 /* ===== TABLE STYLING ===== */
 .recommendation-table {
-  width: 90%;
-  max-width: 900px;
+  width: 80%;
+  max-width: 1000px;
   margin: 0 auto;
   border-collapse: collapse;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 /* Table Header */
@@ -308,7 +316,7 @@ nav ul li a:hover {
 }
 
 .recommendation-table tr:hover td {
-  background-color: #b7ccc4;
+  background-color: #ffe4ce;
 }
 
 /* ===== ABOUT US SECTION ===== */
@@ -357,14 +365,14 @@ nav ul li a:hover {
   border-radius: 25px;
   padding: 35px 30px;
   flex: 1 1 400px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   text-align: left;
 }
 
 .about-cards .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* ===== CARD HEADINGS ===== */
@@ -430,8 +438,8 @@ nav ul li a:hover {
   margin: 0 auto;
   padding: 35px;
   gap: 25px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  overflow: hidden; 
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
 /* ===== IMAGE ===== */
@@ -551,7 +559,7 @@ nav ul li a:hover {
 }
 
 /* ========== FOOTER SECTION ========== */
-footer{
+footer {
   background-color: #f5ecdd;
   color: #c99973;
   text-transform: capitalize;
@@ -630,6 +638,7 @@ footer{
     gap: 2rem;
   }
 }
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 /* Tablet devices (768px) */
@@ -723,4 +732,37 @@ footer{
   .contact-form {
     flex: 1 1 100%;
   }
+}
+
+@media (max-width: 430px) {
+  .vein-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vein-card {
+    width: 70%;
+    padding: 1em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Image on the left, text on the right */
+    column-gap: 1em;
+    align-items: center;
+    background-color: #ffffff00;
+    overflow: auto;
+  }
+
+  .vein-card img {
+    max-width: 105px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .vein-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
 }
