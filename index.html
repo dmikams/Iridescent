@@ -397,45 +397,12 @@
       navMenu.classList.toggle('show');
     });
 
-    // close when a nav link is clicked (better UX)
     document.querySelectorAll('#nav-menu a').forEach(a => {
       a.addEventListener('click', () => {
         navMenu.classList.remove('show');
       });
     });
   </script>
-
-  <script>
-    /* Diagnostic: list ancestors that can break position:sticky */
-    (function () {
-      const header = document.querySelector('header.mobile');
-      if (!header) { console.warn('No header.mobile found'); return; }
-
-      let el = header.parentElement;
-      const badAncestors = [];
-      while (el) {
-        const s = window.getComputedStyle(el);
-        if (s.transform && s.transform !== 'none') badAncestors.push({ el, prop: 'transform', value: s.transform });
-        if (s.perspective && s.perspective !== 'none') badAncestors.push({ el, prop: 'perspective', value: s.perspective });
-        if (s.filter && s.filter !== 'none') badAncestors.push({ el, prop: 'filter', value: s.filter });
-        if (s.overflow && s.overflow !== 'visible') badAncestors.push({ el, prop: 'overflow', value: s.overflow });
-        if (s.overflowX && s.overflowX !== 'visible') badAncestors.push({ el, prop: 'overflow-x', value: s.overflowX });
-        if (s.overflowY && s.overflowY !== 'visible') badAncestors.push({ el, prop: 'overflow-y', value: s.overflowY });
-        el = el.parentElement;
-      }
-
-      if (badAncestors.length === 0) {
-        console.log('No ancestors found that commonly break sticky. Sticky should work — try the fallback below.');
-      } else {
-        console.warn('Found ancestor styles that will break position:sticky:');
-        badAncestors.forEach(item => {
-          console.warn(item.prop, ':', item.value, ' on ', item.el);
-        });
-      }
-    })();
-  </script>
-
-
 </body>
 
 </html>
