@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Irisdescent</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="shorcut icon" href="images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" sizes="192x192" href="images/android-chrome-192x192.png">
+  <link rel="icon" sizes="512x512" href="images/android-chrome-512x512.png">
 </head>
 
 <body>
   <!-- ===== HEADER ===== -->
-  <header>
+  <header class="desktop tablet">
     <div class="logo">
       <img src="images/logo.png" alt="Logo" />
     </div>
@@ -27,38 +34,65 @@
     </nav>
   </header>
 
+  <header class="mobile">
+    <img class="mobile-logo" src="images/logo.png" alt="Logo" />
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#tips-mobile">TIPS</a></li>
+        <li><a href="#recommendation-mobile">RECOMMENDATION</a></li>
+        <li><a href="#about-mobile">ABOUT US</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
   <!-- ===== HERO SECTION ===== -->
-  <section id="home" class="hero">
+  <section id="home" class="hero desktop tablet">
     <img src="images/hero.png" alt="Hero Image">
   </section>
 
+  <section id="home" class="mobile">
+    <h1>irisdescent</h1>
+    <img class="mobile-hero-img" src="images/mobile_home.png" alt="Hero Image">
+    <a href="#tips-mobile"><input type="button" value="Get Started"></a>
+  </section>
+
   <!-- ===== FEATURES SECTION ===== -->
-  <section class="features">
+  <section class="features desktop tablet">
     <div class="feature-card">
-      <img src="images/tips_icon.png" alt="Tips Icon">
+      <a href="#tips"><img src="images/tips_icon.png" alt="Tips Icon"></a>
       <h3>TIPS</h3>
     </div>
 
     <div class="feature-card">
-      <img src="images/reco_icon.png" alt="Recommendations Icon">
+      <a href="#recommendation"><img src="images/reco_icon.png" alt="Recommendations Icon"></a>
       <h3>RECOS</h3>
     </div>
 
     <div class="feature-card">
-      <img src="images/about_icon.png" alt="About Icon">
+      <a href="#about"><img src="images/about_icon.png" alt="About Icon"></a>
       <h3>ABOUT</h3>
     </div>
   </section>
 
   <!-- ===== FILLER SECTION ===== -->
-  <div class="background">
+  <div class="background desktop tablet">
     <div class="moving-text">
       <h2>IRIDESCENT | find the hue that is truly you.</h2>
     </div>
   </div>
 
   <!-- ===== TIPS SECTION ===== -->
-  <section id="tips" class="section">
+  <section id="tips" class="section desktop tablet">
     <h2>TIPS</h2>
     <h3>vein test</h3>
 
@@ -78,7 +112,8 @@
       <div class="vein-card neutral">
         <img src="images/vein_neutral.png" alt="Neutral Undertone">
         <p class="vein-label neutral">NEUTRAL</p>
-        <p class="vein-desc">if you can’t quite tell, or they look like a mix of both, you may have a neutral undertone.</p>
+        <p class="vein-desc">if you can’t quite tell, or they look like a mix of both, you may have a neutral undertone.
+        </p>
       </div>
     </div>
 
@@ -107,17 +142,88 @@
     <!-- ===== VIDEO TUTORIAL SECTION ===== -->
     <div class="video-tutorial">
       <p>Video Tutorial</p>
-      <iframe width="700" height="400" 
-        src="https://www.youtube.com/embed/16HGpwq_wtg?si=FfIskzcoa2ROOxST" 
-        title="Video Tutorial" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      <iframe width="700" height="400" src="https://www.youtube.com/embed/16HGpwq_wtg?si=FfIskzcoa2ROOxST"
+        title="Video Tutorial" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
     </div>
   </section>
 
-  <section id="recommendation" class="section">
+  <!-- ===== TIPS SECTION (MOBILE) ===== -->
+  <section id="tips-mobile" class="section mobile">
+    <h2>TIPS</h2>
+    <h3>vein test</h3>
+
+    <div class="vein-row">
+      <div class="vein-card warm">
+        <img src="images/vein_warm.png" alt="Warm Undertone">
+        <div class="vein-card-content">
+          <p class="vein-label warm">WARM</p>
+          <p class="vein-desc">if your veins appear greenish, you most likely have a warm undertone.</p>
+        </div>
+      </div>
+
+      <div class="vein-card cool">
+        <img src="images/vein_cool.png" alt="Cool Undertone">
+        <div class="vein-card-content">
+          <p class="vein-label cool">COOL</p>
+          <p class="vein-desc">if your veins appear bluish or purple, you probably have a cool undertone.</p>
+        </div>
+      </div>
+
+      <div class="vein-card neutral">
+        <img src="images/vein_neutral.png" alt="Neutral Undertone">
+        <div class="vein-card-content">
+          <p class="vein-label neutral">NEUTRAL</p>
+          <p class="vein-desc">if you can’t quite tell, or they look like a mix of both, you may have a neutral
+            undertone.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h3>jewelry test</h3>
+
+    <div class="jewelry-row">
+      <div class="jewelry-card warm">
+        <img src="images/jewelry_warm.png" alt="Gold Jewelry">
+        <div class="jewelry-card-content">
+          <p class="jewelry-label warm">WARM</p>
+          <p class="jewelry-desc warm">if gold jewelry flatters you more, you likely have a warm undertone.</p>
+        </div>
+      </div>
+
+      <div class="jewelry-card cool">
+        <img src="images/jewelry_cool.png" alt="Silver Jewelry">
+        <div class="jewelry-card-content">
+          <p class="jewelry-label cool">COOL</p>
+          <p class="jewelry-desc cool">if silver jewelry looks better, you probably have a cool undertone.</p>
+        </div>
+      </div>
+
+      <div class="jewelry-card neutral">
+        <img src="images/jewelry_neutral.png" alt="Neutral Jewelry">
+        <div class="jewelry-card-content">
+          <p class="jewelry-label neutral">NEUTRAL</p>
+          <p class="jewelry-desc neutral">if you look good in both, you may have a neutral undertone.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== VIDEO TUTORIAL SECTION ===== -->
+    <div class="video-tutorial">
+      <p>Video Tutorial</p>
+      <iframe width="700" height="400" src="https://www.youtube.com/embed/16HGpwq_wtg?si=FfIskzcoa2ROOxST"
+        title="Video Tutorial" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ===== RECOMMENDATIONS SECTION ===== -->
+  <section id="recommendation" class="section desktop tablet">
     <h2>RECOMMENDATIONS</h2>
     <table class="recommendation-table">
       <thead>
@@ -169,18 +275,81 @@
     </table>
   </section>
 
+  <!-- ===== RECOMMENDATIONS SECTION (MOBILE) ===== -->
+  <section id="recommendation-mobile" class="section mobile">
+    <h2>RECOS</h2>
+
+    <div class="undertone-card neutral">
+      <h3>NEUTRAL Undertone</h3>
+      <ul>
+        <li><strong>Foundation:</strong> Neutral Beige</li>
+        <li><strong>Blush:</strong> Rose & Muted Peach</li>
+        <li><strong>Lipstick:</strong> Classic Reds & Nude Pinks</li>
+        <li><strong>Eyeshadow:</strong> Balance of Both</li>
+        <li><strong>Highlighter:</strong> Neutral Champagne</li>
+        <li><strong>Bronzer:</strong> Neutral Brown</li>
+      </ul>
+    </div>
+
+    <div class="undertone-card warm">
+      <h3>WARM Undertone</h3>
+      <ul>
+        <li><strong>Foundation:</strong> Yellow-based Shades</li>
+        <li><strong>Blush:</strong> Peach & Coral</li>
+        <li><strong>Lipstick:</strong> Orange-Reds & Coral</li>
+        <li><strong>Eyeshadow:</strong> Golden, Peachy, Yellow, Orange</li>
+        <li><strong>Highlighter:</strong> Peachy Champagne</li>
+        <li><strong>Bronzer:</strong> Golden Bronze</li>
+      </ul>
+    </div>
+
+    <div class="undertone-card cool">
+      <h3>COOL Undertone</h3>
+      <ul>
+        <li><strong>Foundation:</strong> Pink-based Shades</li>
+        <li><strong>Blush:</strong> Soft Pink & Mauve</li>
+        <li><strong>Lipstick:</strong> Blue-Reds & Plum</li>
+        <li><strong>Eyeshadow:</strong> Pinks, Mauve, Purple, Ash</li>
+        <li><strong>Highlighter:</strong> Cool Champagne</li>
+        <li><strong>Bronzer:</strong> Cool Taupe</li>
+      </ul>
+    </div>
+  </section>
+
   <!-- ===== ABOUT US SECTION ===== -->
-  <section id="about" class="section">
+  <section id="about" class="section desktop tablet">
     <h2>ABOUT US</h2>
-    <p class="intro">At <b>Iridescent</b>, we believe that makeup is more than colors on your face—it’s self-expression and empowerment. Choosing the right shades starts with understanding your skin undertone.</p>
+    <p class="intro">At <b>Iridescent</b>, we believe that makeup is more than colors on your face—it’s self-expression
+      and empowerment. Choosing the right shades starts with understanding your skin undertone.</p>
     <div class="about-cards">
       <div class="card">
         <h3>OUR STORY</h3>
-        <p>Iridescent was born from a simple idea: make beauty less confusing and more empowering. We believe in highlighting the beauty that’s already there and helping people feel confident in their own skin.</p>
+        <p>Iridescent was born from a simple idea: make beauty less confusing and more empowering. We believe in
+          highlighting the beauty that’s already there and helping people feel confident in their own skin.</p>
       </div>
       <div class="card">
         <h3>OUR MISSION</h3>
-        <p>Our mission is to make beauty effortless by helping everyone understand their unique undertone through education and recommendations that empower confidence and creativity.</p>
+        <p>Our mission is to make beauty effortless by helping everyone understand their unique undertone through
+          education and recommendations that empower confidence and creativity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT US SECTION (MOBILE) ===== -->
+  <section id="about-mobile" class="section mobile">
+    <h2>ABOUT US</h2>
+    <p class="intro">At <b>Iridescent</b>, we believe that makeup is more than colors on your face—it’s self-expression
+      and empowerment. Choosing the right shades starts with understanding your skin undertone.</p>
+    <div class="about-cards">
+      <div class="card">
+        <h3>OUR STORY</h3>
+        <p>Iridescent was born from a simple idea: make beauty less confusing and more empowering. We believe in
+          highlighting the beauty that’s already there and helping people feel confident in their own skin.</p>
+      </div>
+      <div class="card">
+        <h3>OUR MISSION</h3>
+        <p>Our mission is to make beauty effortless by helping everyone understand their unique undertone through
+          education and recommendations that empower confidence and creativity.</p>
       </div>
     </div>
   </section>
@@ -188,35 +357,55 @@
   <!-- ===== CONTACT US ===== -->
   <section id="contact" class="contact-section">
     <h2>CONTACT US</h2>
-  <p>Got a question about undertones? We'd love to hear from you!</p>
+    <p>Got a question about undertones? We'd love to hear from you!</p>
 
-  <div class="contact-container">
+    <div class="contact-container">
 
-    <div class="contact-form">
-      <h3>Ask how we can help you:</h3>
-      <form>
-        <div class="input-row">
-          <input type="text" placeholder="Name*" required>
-          <input type="email" placeholder="Email*" required>
-        </div>
-        <textarea placeholder="Message*" rows="4" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <div class="contact-form">
+        <h3>Ask how we can help you:</h3>
+        <form>
+          <div class="input-row">
+            <input type="text" placeholder="Name*" required>
+            <input type="email" placeholder="Email*" required>
+          </div>
+          <textarea placeholder="Message*" rows="4" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== FOOTER ===== -->
- <footer>
-  <div class="footer-left">
-    <p>© 2025 IRIDESCENT | WEBSITE BY DANNAH MIKAYLA M. SANCHEZ</p>
-  </div>
-  <div class="footer-right">
-    <a href="https://www.facebook.com/dannah.sanchez.96" target="_blank"><img src="images/facebook_logo.png" alt="Facebook"></a>
-    <a href="mailto:someone@example.com" target="_blank"><img src="images/email_logo.png" alt="Email"></a>
-    <a href="https://www.instagram.com/mkylsnchz" target="_blank"><img src="images/instagram_logo.png" alt="Instagram"></a>
-    <a href="https://www.linkedin.com/in/dannahsanchez" target="_blank"><img src="images/linkedin_logo.png" alt="LinkedIn"></a>
-  </div>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-left desktop tablet">
+      <p><b>© 2025 IRIDESCENT | WEBSITE BY DANNAH MIKAYLA M. SANCHEZ</b></p>
+    </div>
+
+    <div class="footer-left mobile">
+      <p><b>© 2025 IRIDESCENT <br> WEBSITE BY DANNAH MIKAYLA M. SANCHEZ</b></p>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.facebook.com/dannah.sanchez.96" target="_blank"><img src="images/facebook_logo.png" alt="Facebook"></a>
+      <a href="mailto:someone@example.com"><img src="images/email_logo.png" alt="Email"></a>
+      <a href="https://www.instagram.com/mkylsnchz" target="_blank"><img src="images/instagram_logo.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com/in/dannahsanchez" target="_blank"><img src="images/linkedin_logo.png" alt="LinkedIn"></a>
+    </div>
   </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+
+    burger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    document.querySelectorAll('#nav-menu a').forEach(a => {
+      a.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+      });
+    });
+  </script>
 </body>
+
 </html>

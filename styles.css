@@ -753,6 +753,7 @@ footer img {
   }
 }
 
+/* Mobile devices (430px) */
 @media (max-width: 430px) {
   html {
     scroll-padding-top: 50px;
@@ -819,7 +820,6 @@ footer img {
     flex-direction: column;
     gap: 1em;
     padding: 0;
-    /* ensure consistent spacing */
   }
 
   nav ul li {
