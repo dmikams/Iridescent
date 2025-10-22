@@ -692,6 +692,7 @@ footer {
   }
 }
 
+/* Mobile devices (430px) */
 @media (max-width: 430px) {
   .vein-row {
     display: flex;
