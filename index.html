@@ -19,7 +19,7 @@
 
 <body>
   <!-- ===== HEADER ===== -->
-  <header>
+  <header class="desktop tablet">
     <div class="logo">
       <img src="images/logo.png" alt="Logo" />
     </div>
@@ -34,6 +34,27 @@
     </nav>
   </header>
 
+  <header class="mobile">
+    <img class="mobile-logo" src="images/logo.png" alt="Logo" />
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#tips-mobile">TIPS</a></li>
+        <li><a href="#recommendation-mobile">RECOMMENDATION</a></li>
+        <li><a href="#about-mobile">ABOUT US</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
   <!-- ===== HERO SECTION ===== -->
   <section id="home" class="hero desktop tablet">
     <img src="images/hero.png" alt="Hero Image">
@@ -41,8 +62,8 @@
 
   <section id="home" class="mobile">
     <h1>irisdescent</h1>
-    <img src="images/mobile_home.png" alt="Hero Image">
-    <a href="#tips"><input type="button" value="Get Started"></a>
+    <img class="mobile-hero-img" src="images/mobile_home.png" alt="Hero Image">
+    <a href="#tips-mobile"><input type="button" value="Get Started"></a>
   </section>
 
   <!-- ===== FEATURES SECTION ===== -->
@@ -130,7 +151,7 @@
   </section>
 
   <!-- ===== TIPS SECTION (MOBILE) ===== -->
-  <section id="tips" class="section mobile">
+  <section id="tips-mobile" class="section mobile">
     <h2>TIPS</h2>
     <h3>vein test</h3>
 
@@ -253,7 +274,7 @@
     </table>
   </section>
 
-  <section id="recommendation" class="section mobile">
+  <section id="recommendation-mobile" class="section mobile">
     <h2>RECOS</h2>
 
     <div class="undertone-card neutral">
@@ -294,7 +315,25 @@
   </section>
 
   <!-- ===== ABOUT US SECTION ===== -->
-  <section id="about" class="section">
+  <section id="about" class="section desktop tablet">
+    <h2>ABOUT US</h2>
+    <p class="intro">At <b>Iridescent</b>, we believe that makeup is more than colors on your face—it’s self-expression
+      and empowerment. Choosing the right shades starts with understanding your skin undertone.</p>
+    <div class="about-cards">
+      <div class="card">
+        <h3>OUR STORY</h3>
+        <p>Iridescent was born from a simple idea: make beauty less confusing and more empowering. We believe in
+          highlighting the beauty that’s already there and helping people feel confident in their own skin.</p>
+      </div>
+      <div class="card">
+        <h3>OUR MISSION</h3>
+        <p>Our mission is to make beauty effortless by helping everyone understand their unique undertone through
+          education and recommendations that empower confidence and creativity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-mobile" class="section mobile">
     <h2>ABOUT US</h2>
     <p class="intro">At <b>Iridescent</b>, we believe that makeup is more than colors on your face—it’s self-expression
       and empowerment. Choosing the right shades starts with understanding your skin undertone.</p>
@@ -349,6 +388,54 @@
       <a href="#"><img src="images/linkedin_logo.png" alt="LinkedIn"></a>
     </div>
   </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+
+    burger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // close when a nav link is clicked (better UX)
+    document.querySelectorAll('#nav-menu a').forEach(a => {
+      a.addEventListener('click', () => {
+        navMenu.classList.remove('show');
+      });
+    });
+  </script>
+
+  <script>
+    /* Diagnostic: list ancestors that can break position:sticky */
+    (function () {
+      const header = document.querySelector('header.mobile');
+      if (!header) { console.warn('No header.mobile found'); return; }
+
+      let el = header.parentElement;
+      const badAncestors = [];
+      while (el) {
+        const s = window.getComputedStyle(el);
+        if (s.transform && s.transform !== 'none') badAncestors.push({ el, prop: 'transform', value: s.transform });
+        if (s.perspective && s.perspective !== 'none') badAncestors.push({ el, prop: 'perspective', value: s.perspective });
+        if (s.filter && s.filter !== 'none') badAncestors.push({ el, prop: 'filter', value: s.filter });
+        if (s.overflow && s.overflow !== 'visible') badAncestors.push({ el, prop: 'overflow', value: s.overflow });
+        if (s.overflowX && s.overflowX !== 'visible') badAncestors.push({ el, prop: 'overflow-x', value: s.overflowX });
+        if (s.overflowY && s.overflowY !== 'visible') badAncestors.push({ el, prop: 'overflow-y', value: s.overflowY });
+        el = el.parentElement;
+      }
+
+      if (badAncestors.length === 0) {
+        console.log('No ancestors found that commonly break sticky. Sticky should work — try the fallback below.');
+      } else {
+        console.warn('Found ancestor styles that will break position:sticky:');
+        badAncestors.forEach(item => {
+          console.warn(item.prop, ':', item.value, ' on ', item.el);
+        });
+      }
+    })();
+  </script>
+
+
 </body>
 
 </html>
