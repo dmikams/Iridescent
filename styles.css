@@ -963,3 +963,147 @@ footer img {
     gap: 1em;
   }
 }
+
+/* ===== PRINT MEDIA QUERY ===== */
+@media print {
+  * {
+    background: none !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+  }
+
+  header,
+  footer,
+  .hero,
+  .video-tutorial,
+  .burger,
+  nav {
+    display: none !important;
+  }
+
+  /* Headings */
+  h1, h2, h3 {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  .vein-row,
+  .jewelry-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    flex-wrap: nowrap !important;
+    gap: 20px !important;
+    margin: 0 auto !important;
+  }
+
+  .vein-card,
+  .jewelry-card {
+    width: 30% !important;
+    display: inline-block !important;
+    vertical-align: top !important;
+    background: #fff !important;
+    border: 1px solid #00000030 !important;
+    padding: 10px !important;
+  }
+
+  .recommendation-table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border: 1px solid #000 !important;
+  }
+
+  .recommendation-table th,
+  .recommendation-table td {
+    border: 1px solid #000 !important;
+    padding: 8px !important;
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  #about,
+  #contact {
+    background: #fff !important;
+    color: #000 !important;
+    padding: 30px !important;
+  }
+
+  #about h2,
+  #contact h2 {
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  .about-cards .card {
+    background: #fff !important;
+    border: 1px solid #00000020 !important;
+    box-shadow: none !important;
+  }
+
+  .contact-section {
+    display: block !important;
+    text-align: left !important;
+    background: #fff !important;
+    padding: 30px !important;
+    page-break-before: always; 
+  }
+
+  .contact-container {
+    display: block !important;
+    border: 1px solid #00000030 !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 20px !important;
+  }
+
+  .contact-form {
+    display: block !important;
+    background: #fff !important;
+    padding: 0 !important;
+  }
+
+  .contact-form h3 {
+    color: #000 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    background: #fff !important;
+    border: 1px solid #000 !important;
+    color: #000 !important;
+    padding: 8px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contact-form button {
+    display: none !important; 
+  }
+
+  section,
+  #about,
+  #recommendation,
+  #tips,
+  #contact {
+    padding: 20px !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
